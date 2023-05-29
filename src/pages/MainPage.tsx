@@ -1,10 +1,8 @@
 import {Modal} from "../components/Modal";
 import {useDispatch, useSelector} from "react-redux";
 import {IStore} from "../store/types";
-import {setMainInfo, setIsModalShown} from "../store/mainInfo.slice";
-import {IMainInfo} from "../store/mainInfo.type";
-import {useEffect} from "react";
-import {SupportChat} from "../components/SupportChat";
+import {setIsModalShown} from "../store/mainInfo.slice";
+import {SupportChat} from "../components/supportChat/SupportChat";
 
 export function MainPage() {
     const dispatch = useDispatch();

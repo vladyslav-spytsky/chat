@@ -14,6 +14,11 @@ export interface IMainInfo {
   isFullScreen: boolean;
   search: string;
   inputMessage: string;
-  sendMessages: string[];
+  sendMessages: IChatMessage[];
   supportType: string;
+}
+
+export interface IChatMessage {
+  message: string;
+  date: string;
 }

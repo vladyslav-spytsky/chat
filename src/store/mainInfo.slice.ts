@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { IStore } from './types'
+import {IChatMessage} from "./mainInfo.type";
 
 const initialState: IStore['mainInfo'] = {
   isShown: false,
@@ -16,16 +17,22 @@ export const mainInfoSlice = createSlice({
   reducers: {
     setMainInfo: (state, action) => action.payload,
     setIsModalShown: (state, action) => {
-      state.isShown = action.payload
+      state.isShown = action.payload;
     },
     setIsFullScreen: (state, action) => {
-      state.isFullScreen = action.payload
+      state.isFullScreen = action.payload;
     },
     setInputMessage: (state, action) => {
-      state.inputMessage = action.payload
+      state.inputMessage = action.payload;
     },
     setMessageToListMessages: (state, action) => {
-      state.sendMessages.push(action.payload)
+      state.inputMessage = "";
+      const now: Date = new Date();
+      let chatMessage: IChatMessage = {
+        message: action.payload,
+        date: now.toDateString()
+      }
+      state.sendMessages.push(chatMessage);
     }
   },
 })
