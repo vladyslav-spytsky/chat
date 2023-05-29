@@ -20,7 +20,7 @@ export function ChatMessage({message}: MessageProps) {
                     </div>
                     <div className="p-[8px] bg-[#f2f4f8]">
                         <p className="m-0 font-[400] text-[13px] text-[#5d5d5d] whitespace-pre-line">
-                            <span className="break-words">{message.message}</span>
+                            <span className="anywhere">{message.message}</span>
                         </p>
                     </div>
                 </div>

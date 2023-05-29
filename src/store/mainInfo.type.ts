@@ -3,18 +3,22 @@ type SupportType = {
 };
 
 export const SupportTypes: SupportType = {
-  chat: "chat",
+  online: "online",
   email: "email",
-  call: "call",
+  technical: "technical",
   news: "news"
 };
 
 export interface IMainInfo {
+  title: string;
+  isEmailWrapper: boolean;
   isShown: boolean;
   isFullScreen: boolean;
   search: string;
-  inputMessage: string;
-  sendMessages: IChatMessage[];
+  inputMessageTechnical: string;
+  inputMessageOnline: string;
+  sendMessagesTechnical: IChatMessage[];
+  sendMessagesOnline: IChatMessage[];
   supportType: string;
 }
 

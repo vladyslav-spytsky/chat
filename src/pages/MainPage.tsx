@@ -2,7 +2,7 @@ import {Modal} from "../components/Modal";
 import {useDispatch, useSelector} from "react-redux";
 import {IStore} from "../store/types";
 import {setIsModalShown} from "../store/mainInfo.slice";
-import {SupportChat} from "../components/supportChat/SupportChat";
+import {SupportModal} from "../components/supportChat/SupportModal";
 
 export function MainPage() {
     const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export function MainPage() {
         <div className = "container mx-auto max-w-2xl pt-5">
             { mainInfo?.isShown && (
                 <Modal onClose={() => dispatch(setIsModalShown(false))}>
-                    <SupportChat/>
+                    <SupportModal/>
                 </Modal>
             )}
             <div className="flex flex-col fixed right-5 bottom-5 z-30">

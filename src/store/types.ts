@@ -5,7 +5,7 @@ import {IMainInfo} from "./mainInfo.type";
 
 
 export interface IStore {
-    mainInfo: IMainInfo | null;
+    mainInfo: IMainInfo;
 }
 
 export type RootState = ReturnType<typeof store.getState>;
